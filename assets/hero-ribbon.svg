@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="field" cx="0" cy="0" r="1" gradientTransform="translate(855 474) rotate(-132) scale(620 485)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A8652B" stop-opacity="0.72" />
+      <stop offset="0.44" stop-color="#754018" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#51280F" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ribbon" x1="612" y1="112" x2="1060" y2="623" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4B24D" stop-opacity="0.24" />
+      <stop offset="1" stop-color="#F4B24D" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#51280F" />
+  <rect width="1200" height="630" fill="url(#field)" />
+  <g fill="none" stroke-linecap="round">
+    <path d="M1305 664C1134 602 1050 460 892 422C744 386 632 462 516 382C416 313 425 187 318 113" stroke="url(#ribbon)" stroke-width="116" />
+    <path d="M1242 684C1068 588 1026 486 881 446C725 403 627 489 497 399C403 334 382 240 286 166" stroke="#F5BD6A" stroke-opacity="0.15" stroke-width="30" />
+    <path d="M1218 693C1063 579 1001 512 850 470C701 428 603 509 477 421C378 352 354 279 267 212" stroke="#FCE7C7" stroke-opacity="0.09" stroke-width="7" />
+  </g>
+</svg>

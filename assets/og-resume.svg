@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="warm-field" cx="0" cy="0" r="1" gradientTransform="translate(855 474) rotate(-132) scale(620 485)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A8652B" stop-opacity="0.72" />
+      <stop offset="0.44" stop-color="#754018" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#51280F" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="veil" x1="612" y1="112" x2="1060" y2="623" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4B24D" stop-opacity="0.24" />
+      <stop offset="1" stop-color="#F4B24D" stop-opacity="0" />
+    </linearGradient>
+    <clipPath id="field-clip">
+      <rect x="84" width="1116" height="630" />
+    </clipPath>
+    <style>
+      @font-face {
+        font-family: "Instrument Sans OG";
+        src: url("file:///Users/sudomakes/code/skills/skills/canvas-design/canvas-fonts/InstrumentSans-Regular.ttf");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Instrument Sans OG";
+        src: url("file:///Users/sudomakes/code/skills/skills/canvas-design/canvas-fonts/InstrumentSans-Bold.ttf");
+        font-weight: 700;
+      }
+      text { font-family: "Instrument Sans OG", "Avenir Next", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="#FBFAF7" />
+  <rect x="84" width="1116" height="630" fill="#51280F" />
+  <rect x="84" width="1116" height="630" fill="url(#warm-field)" />
+
+  <g clip-path="url(#field-clip)" fill="none" stroke-linecap="round">
+    <path d="M1305 664C1134 602 1050 460 892 422C744 386 632 462 516 382C416 313 425 187 318 113" stroke="url(#veil)" stroke-width="116" />
+    <path d="M1242 684C1068 588 1026 486 881 446C725 403 627 489 497 399C403 334 382 240 286 166" stroke="#F5BD6A" stroke-opacity="0.15" stroke-width="30" />
+    <path d="M1218 693C1063 579 1001 512 850 470C701 428 603 509 477 421C378 352 354 279 267 212" stroke="#FCE7C7" stroke-opacity="0.09" stroke-width="7" />
+  </g>
+
+  <line x1="84" y1="0" x2="84" y2="630" stroke="#D8D0C7" />
+  <rect x="23" y="34" width="38" height="38" fill="none" stroke="#211D19" stroke-width="1.5" />
+  <text x="42" y="60" fill="#211D19" font-size="18" font-weight="700" text-anchor="middle">VC</text>
+  <text x="0" y="0" fill="#554B43" font-size="11" font-weight="700" letter-spacing="2.2" text-anchor="middle" transform="translate(42 548) rotate(-90)">PROFILE / 2026</text>
+
+  <g transform="translate(140 0)">
+    <line x1="0" y1="100" x2="54" y2="100" stroke="#FBFAF7" stroke-width="2" />
+    <text x="72" y="106" fill="#FBFAF7" font-size="17" font-weight="700" letter-spacing="3.1">AI-NATIVE INSURANCE INFRASTRUCTURE</text>
+
+    <text x="0" y="278" fill="#FBFAF7" font-size="108" font-weight="700" letter-spacing="-6">Vaibhav</text>
+    <text x="0" y="382" fill="#FBFAF7" font-size="108" font-weight="400" letter-spacing="-6">Chopra</text>
+
+    <text x="4" y="458" fill="#FBFAF7" font-size="29" font-weight="700">Co-Founder &amp; CTO / Founder-Operator</text>
+    <text x="4" y="499" fill="#FBFAF7" font-size="29" font-weight="700">Software, AI &amp; Insurtech</text>
+
+    <line x1="4" y1="552" x2="824" y2="552" stroke="#FBFAF7" stroke-opacity="0.34" />
+    <text x="4" y="588" fill="#FBFAF7" font-size="17" font-weight="700" letter-spacing="1.4">RESUME.SUDOMAKES.ART</text>
+    <text x="824" y="588" fill="#FBFAF7" font-size="15" font-weight="400" letter-spacing="1.2" text-anchor="end">BUILD WHAT MATTERS. MAKE IT LAST.</text>
+  </g>
+</svg>

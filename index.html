@@ -7,6 +7,21 @@
       name="description"
       content="Vaibhav Chopra — Co-Founder & CTO, founder-operator, and software / AI / insurtech builder."
     />
+    <link rel="canonical" href="https://resume.sudomakes.art/" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://resume.sudomakes.art/" />
+    <meta property="og:title" content="Vaibhav Chopra — Co-Founder & CTO" />
+    <meta property="og:description" content="Founder-operator building AI-native software across insurance, product strategy, and enterprise systems." />
+    <meta property="og:image" content="https://resume.sudomakes.art/assets/og-resume.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Vaibhav Chopra — Co-Founder and CTO, founder-operator in software, AI, and insurtech." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vaibhav Chopra — Co-Founder & CTO" />
+    <meta name="twitter:description" content="Founder-operator building AI-native software across insurance, product strategy, and enterprise systems." />
+    <meta name="twitter:image" content="https://resume.sudomakes.art/assets/og-resume.png" />
+    <meta name="twitter:image:alt" content="Vaibhav Chopra — Co-Founder and CTO, founder-operator in software, AI, and insurtech." />
     <meta name="theme-color" content="#623817" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23592d12'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-size='16' fill='white'%3EVC%3C/text%3E%3C/svg%3E" />
     <title>Vaibhav Chopra — Founder &amp; CTO</title>
@@ -53,6 +68,8 @@
         --weight-semibold: 600;
         --weight-bold: 700;
         --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        --edge-gutter: clamp(24px, 4vw, 58px);
+        --touch-target: 44px;
         --page-progress: 0;
       }
 
@@ -121,6 +138,8 @@
         top: 12px;
         left: 50%;
         z-index: 100;
+        display: flex;
+        min-height: var(--touch-target);
         padding: 10px 16px;
         color: var(--background);
         background: var(--ink);
@@ -130,6 +149,7 @@
         text-transform: uppercase;
         transform: translate(-50%, -160%);
         transition: transform 180ms var(--ease-out);
+        align-items: center;
       }
 
       .skip-link:focus {
@@ -167,8 +187,8 @@
 
       .folio__mark {
         display: grid;
-        width: 36px;
-        height: 36px;
+        width: var(--touch-target);
+        height: var(--touch-target);
         place-items: center;
         border: 1px solid var(--ink);
         font-family: var(--font-display);
@@ -197,6 +217,7 @@
         position: relative;
         display: block;
         min-width: 74px;
+        min-height: var(--touch-target);
         padding: 14px 10px;
         color: var(--ink-soft);
         font: var(--weight-semibold) var(--text-micro)/1 var(--font-label);
@@ -237,7 +258,7 @@
 
       .page {
         width: min(1240px, calc(100% - 72px));
-        margin-left: max(72px, calc((100vw - 1168px) / 2 + 72px));
+        margin-left: max(72px, calc((100vw - 1240px) / 2));
         padding: 0 clamp(24px, 5vw, 80px) 72px;
       }
 
@@ -254,7 +275,7 @@
         isolation: isolate;
         color: var(--background);
         background: var(--signal);
-        padding-inline: clamp(24px, 4vw, 58px);
+        padding-inline: var(--edge-gutter);
       }
 
       .hero__canvas {
@@ -283,10 +304,7 @@
       }
 
       .hero:not(.has-webgl) {
-        background: var(--signal);
-        background:
-          radial-gradient(circle at 28% 64%, color-mix(in oklch, var(--highlight) 14%, transparent), transparent 34%),
-          var(--signal);
+        background: #51280f url("assets/hero-ribbon.svg") center / cover no-repeat;
       }
 
       .hero__eyebrow,
@@ -387,7 +405,7 @@
       .contact-list a {
         display: inline-flex;
         max-width: 100%;
-        min-height: 32px;
+        min-height: var(--touch-target);
         overflow-wrap: anywhere;
         word-break: break-word;
         text-decoration-color: color-mix(in oklch, var(--signal) 65%, transparent);
@@ -403,7 +421,7 @@
       .hero__actions {
         position: absolute;
         top: 28px;
-        right: 0;
+        right: var(--edge-gutter);
         display: flex;
         gap: 8px;
       }
@@ -454,7 +472,7 @@
       .scroll-cue {
         position: absolute;
         bottom: 28px;
-        left: 0;
+        left: var(--edge-gutter);
         display: flex;
         color: var(--background);
         font: var(--weight-semibold) var(--text-micro)/1 var(--font-label);
@@ -589,6 +607,42 @@
 
       .entry__title strong {
         font-weight: var(--weight-semibold);
+      }
+
+      .entry__identity {
+        display: grid;
+        min-width: 0;
+        margin: -0.08em 0 8px;
+        gap: clamp(10px, 1vw, 14px);
+        grid-template-columns: 64px minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .entry__logo-frame {
+        display: grid;
+        width: 64px;
+        height: clamp(30px, 3.2vw, 40px);
+        place-items: center end;
+      }
+
+      .entry__logo {
+        display: block;
+        width: auto;
+        max-width: 62px;
+        height: auto;
+        max-height: 36px;
+        object-fit: contain;
+        object-position: left center;
+      }
+
+      .entry__logo--square {
+        width: 32px;
+        height: 32px;
+      }
+
+      .entry__identity .entry__title {
+        min-width: 0;
+        margin: 0;
       }
 
       .entry__points {
@@ -894,8 +948,8 @@
         }
 
         .folio__mark {
-          width: 34px;
-          height: 34px;
+          width: var(--touch-target);
+          height: var(--touch-target);
         }
 
         .folio__nav {
@@ -929,12 +983,18 @@
         }
 
         .hero {
+          --hero-gutter-left: max(24px, env(safe-area-inset-left));
+          --hero-gutter-right: max(24px, env(safe-area-inset-right));
           min-height: calc(100svh - 62px);
-          padding: 96px 0 54px;
+          padding-top: 96px;
+          padding-right: var(--hero-gutter-right);
+          padding-bottom: 54px;
+          padding-left: var(--hero-gutter-left);
         }
 
         .hero__actions {
           top: 22px;
+          right: var(--hero-gutter-right);
         }
 
         .action {
@@ -998,6 +1058,26 @@
 
         .entry__title {
           font-size: clamp(1.65rem, 8vw, 2.3rem);
+        }
+
+        .entry__identity {
+          gap: 10px;
+          grid-template-columns: 52px minmax(0, 1fr);
+        }
+
+        .entry__logo-frame {
+          width: 52px;
+          height: 32px;
+        }
+
+        .entry__logo {
+          max-width: 50px;
+          max-height: 30px;
+        }
+
+        .entry__logo--square {
+          width: 29px;
+          height: 29px;
         }
 
         .achievement-list li {
@@ -1232,6 +1312,25 @@
           line-height: 1;
         }
 
+        .entry__identity {
+          margin: 0 0 0.02in;
+          gap: 0.05in;
+          grid-template-columns: 0.2in minmax(0, 1fr);
+        }
+
+        .entry__logo-frame {
+          width: 0.2in;
+          height: 0.16in;
+        }
+
+        .entry__logo,
+        .entry__logo--square {
+          width: auto;
+          max-width: 0.19in;
+          height: auto;
+          max-height: 0.15in;
+        }
+
         .entry__points {
           margin: 0.025in 0 0;
           gap: 0.015in;
@@ -1399,7 +1498,10 @@
           <article class="entry reveal">
             <div class="entry__dates">Jun 2025 — Present<span>India</span></div>
             <div>
-              <h3 class="entry__title"><strong>Vaatun</strong> — Co-Founder &amp; CTO</h3>
+              <div class="entry__identity">
+                <span class="entry__logo-frame"><img class="entry__logo entry__logo--square" src="assets/logos/vaatun.svg" alt="" width="32" height="32" /></span>
+                <h3 class="entry__title"><strong>Vaatun</strong> — Co-Founder &amp; CTO</h3>
+              </div>
               <ul class="entry__points">
                 <li>Building an AI-native operating system for insurance intermediaries, including Vantage (ERP/CRM), Advantage (client &amp; employee benefits portal), and insurance distribution tooling.</li>
                 <li>Leads technical direction while contributing across product strategy, business research, customer problems, architecture, and execution.</li>
@@ -1411,7 +1513,10 @@
           <article class="entry reveal">
             <div class="entry__dates">Jun 2023 — Jun 2025<span>Bengaluru, India</span></div>
             <div>
-              <h3 class="entry__title"><strong>Microsoft</strong> — Software Engineer</h3>
+              <div class="entry__identity">
+                <span class="entry__logo-frame"><img class="entry__logo entry__logo--square" src="assets/logos/microsoft.svg" alt="" width="32" height="32" /></span>
+                <h3 class="entry__title"><strong>Microsoft</strong> — Software Engineer</h3>
+              </div>
               <ul class="entry__points">
                 <li>Worked on Microsoft 365 / Copilot and generative-AI platform capabilities, including multi-tenant infrastructure spanning 20+ Azure PaaS/SaaS services.</li>
                 <li>Built and operated cloud systems using Azure OpenAI, Azure AI Search, Azure Front Door, AKS, Helm, Bicep, Terraform, .NET, Python, and React.</li>
@@ -1422,7 +1527,10 @@
           <article class="entry reveal">
             <div class="entry__dates">Mar 2021 — May 2023<span>Gurugram, India</span></div>
             <div>
-              <h3 class="entry__title"><strong>PrishaPolicy</strong> — Founding Technical Team Member &amp; Solutions Architect</h3>
+              <div class="entry__identity">
+                <span class="entry__logo-frame"><img class="entry__logo entry__logo--square" src="assets/logos/prishapolicy.svg?v=2" alt="" width="32" height="32" /></span>
+                <h3 class="entry__title"><strong>PrishaPolicy</strong> — Founding Technical Team Member &amp; Solutions Architect</h3>
+              </div>
               <ul class="entry__points">
                 <li>Built insuretech products from scratch, including CRMs, customer-support portals, marketing sites, and mobile applications.</li>
                 <li>Led migration from on-premise infrastructure to Azure using PostgreSQL, Storage Accounts, Web Apps, and Container Registry, reducing hosting costs by more than 50%.</li>
@@ -1433,7 +1541,10 @@
           <article class="entry reveal">
             <div class="entry__dates">Oct 2021 — Apr 2022<span>Bengaluru, India</span></div>
             <div>
-              <h3 class="entry__title"><strong>Samsung R&amp;D Institute India</strong> — Student Researcher</h3>
+              <div class="entry__identity">
+                <span class="entry__logo-frame"><img class="entry__logo" src="assets/logos/samsung.svg?v=2" alt="" width="60" height="10" /></span>
+                <h3 class="entry__title"><strong>Samsung R&amp;D Institute India</strong> — Student Researcher</h3>
+              </div>
               <ul class="entry__points">
                 <li>Researched neural-network approaches for low-light video denoising targeted at better camera experiences on low-power mobile devices.</li>
               </ul>
@@ -1443,7 +1554,10 @@
           <article class="entry reveal">
             <div class="entry__dates">Jun 2021 — Aug 2021<span>India</span></div>
             <div>
-              <h3 class="entry__title"><strong>Celo</strong> — Celo India Fellow</h3>
+              <div class="entry__identity">
+                <span class="entry__logo-frame"><img class="entry__logo entry__logo--square" src="assets/logos/celo.svg" alt="" width="32" height="32" /></span>
+                <h3 class="entry__title"><strong>Celo</strong> — Celo India Fellow</h3>
+              </div>
               <ul class="entry__points">
                 <li>Selected among the top 10 applicants from thousands across India; built open-source wallet and notification systems and presented solutions to the global Celo community.</li>
               </ul>
@@ -1607,45 +1721,61 @@
               return fract(sin(dot(point, vec2(127.1, 311.7))) * 43758.5453123);
             }
 
-            float filament(vec2 uv, float offset, float frequency, float phase) {
-              float curve = 0.58 + offset;
-              curve += sin(uv.x * frequency + phase) * 0.055;
-              curve += sin(uv.x * (frequency * 0.47) - phase * 1.4) * 0.025;
-              float distanceToCurve = abs(uv.y - curve);
-              return 1.0 - smoothstep(0.002, 0.013, distanceToCurve);
+            float ribbonCenter(float x, float time, float mobile) {
+              float desktop = 0.89;
+              desktop -= 0.58 * smoothstep(0.14, 0.49, x);
+              desktop += 0.045 * smoothstep(0.49, 0.69, x) * (1.0 - smoothstep(0.69, 0.82, x));
+              desktop -= 0.24 * smoothstep(0.76, 1.02, x);
+
+              float phone = 0.87;
+              phone -= 0.56 * smoothstep(0.06, 0.66, x);
+              phone -= 0.15 * smoothstep(0.72, 1.0, x);
+
+              float center = mix(desktop, phone, mobile);
+              center += sin(x * 4.2 + time) * mix(0.008, 0.014, mobile);
+              return center;
+            }
+
+            float softBand(float distanceToCenter, float halfWidth, float feather) {
+              return 1.0 - smoothstep(halfWidth, halfWidth + feather, distanceToCenter);
             }
 
             void main() {
               vec4 flowSample = texture(uFlow, vUv);
               vec2 flow = flowSample.rg * 2.0 - 1.0;
               float energy = flowSample.b;
-              float slowTime = uTime * 0.00008;
-              vec2 warped = vUv + flow * vec2(0.034, 0.052);
-              warped.y += sin(warped.x * 6.0 + slowTime) * 0.006;
+              float slowTime = uTime * 0.000035;
+              float mobile = 1.0 - smoothstep(0.72, 1.14, uAspect);
+              vec2 warped = vUv + flow * vec2(0.016, 0.024);
 
-              float threads = 0.0;
-              threads += filament(warped, -0.105, 7.1, 0.7 + slowTime);
-              threads += filament(warped, -0.045, 8.8, 2.4 - slowTime * 0.7) * 0.72;
-              threads += filament(warped, 0.025, 6.4, 4.1 + slowTime * 0.5) * 0.88;
-              threads += filament(warped, 0.092, 9.6, 1.3 - slowTime) * 0.58;
+              float center = ribbonCenter(warped.x, slowTime, mobile);
+              center += flow.y * 0.024;
+              float distanceToRibbon = abs(warped.y - center);
+              float width = mix(0.105, 0.135, mobile);
+              float ribbon = softBand(distanceToRibbon, width, 0.095);
+              float core = softBand(distanceToRibbon, width * 0.34, 0.038);
+              float lowerEdge = 1.0 - smoothstep(0.004, 0.012, abs(distanceToRibbon - width * 0.68));
+              float fineEdge = 1.0 - smoothstep(0.002, 0.007, abs(distanceToRibbon - width * 0.92));
 
-              vec2 fieldPoint = vec2(vUv.x * uAspect, vUv.y);
-              vec2 fieldCenter = vec2(uAspect * 0.36, 0.56);
-              float field = 1.0 - smoothstep(0.18, 0.92, distance(fieldPoint, fieldCenter));
-              float edgeFade = smoothstep(0.02, 0.16, vUv.x) * (1.0 - smoothstep(0.84, 0.99, vUv.x));
-              threads *= field * edgeFade;
+              float endFade = smoothstep(0.03, 0.2, warped.x);
+              ribbon *= endFade;
+              core *= endFade;
+              lowerEdge *= endFade;
+              fineEdge *= endFade;
 
-              vec3 deepInk = vec3(0.255, 0.118, 0.048);
-              vec3 warmInk = vec3(0.345, 0.180, 0.072);
+              vec2 fieldPoint = vec2((vUv.x - 0.72) * uAspect, vUv.y - 0.25);
+              float field = 1.0 - smoothstep(0.16, 0.94, length(fieldPoint));
+
+              vec3 deepInk = vec3(0.318, 0.157, 0.059);
+              vec3 warmInk = vec3(0.455, 0.225, 0.082);
               vec3 ochre = vec3(0.835, 0.485, 0.155);
-              vec3 parchment = vec3(0.945, 0.805, 0.565);
-              float verticalLight = 0.5 + 0.5 * (1.0 - vUv.y);
-              vec3 color = mix(deepInk, warmInk, verticalLight * 0.68);
-              color = mix(color, ochre, clamp(threads * 0.12 + energy * 0.035, 0.0, 0.16));
-              color = mix(color, parchment, clamp(threads * energy * 0.055, 0.0, 0.07));
+              vec3 parchment = vec3(0.965, 0.755, 0.420);
+              vec3 color = mix(deepInk, warmInk, field * 0.16);
+              color = mix(color, ochre, clamp(ribbon * 0.31 + core * 0.07 + energy * 0.025, 0.0, 0.38));
+              color = mix(color, parchment, clamp(lowerEdge * 0.06 + fineEdge * 0.045, 0.0, 0.09));
 
               float grain = hash(gl_FragCoord.xy + uResolution * 0.13) - 0.5;
-              color += grain * 0.012;
+              color += grain * 0.009;
               fragColor = vec4(color, 1.0);
             }
           `;
